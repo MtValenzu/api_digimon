@@ -5,6 +5,8 @@ fetch('https://digimon-api.vercel.app/api/digimon')
   .then(data => {
     const digimonList = document.querySelector('#digimon-list');
 
+// sacar cada digimon con sus datos y hacer el listado 
+//Se crea un <div> para el nombre, la imagen y el nivel, y se crea un <li> para contener el <div>.   
     data.forEach(digimon => {
       const digimonBox = document.createElement('div');
       digimonBox.classList.add('digimon-box');
@@ -26,6 +28,7 @@ fetch('https://digimon-api.vercel.app/api/digimon')
       const digimonItem = document.createElement('li');
       digimonItem.appendChild(digimonBox);
       
+      //se agrega un listener para hacer click en cada elemento de la lista
       digimonItem.addEventListener('click', () => {
         const currentSelected = document.querySelector('.selected');
         if (currentSelected) {
