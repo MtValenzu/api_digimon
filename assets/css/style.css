@@ -1,9 +1,7 @@
 body {
-    background-image: url("/assets/img/fondo_digimon.jpg");
-    background-size: cover;
+    background-image: url("/assets/img/fondo2.jpg");
+    background-size: 100%;
 }
-
-
 
 #digimon-list {
     display: flex;
